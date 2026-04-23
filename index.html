@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tour IES Alguadaira</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #panorama {
+      width: 100%;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="panorama"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+  <script>
+    pannellum.viewer('panorama', {
+      default: {
+        firstScene: 'entrada',
+        autoLoad: true,
+        sceneFadeDuration: 1000
+      },
+
+      scenes: {
+        entrada: {
+          title: 'Entrada',
+          type: 'equirectangular',
+          panorama: 'assets/scenes/Entrada1.png',
+          hotSpots: [
+            {
+              pitch: -6.094264421203479,
+              yaw: -0.03550299815699852,
+              type: 'scene',
+              text: 'Ir al hall',
+              sceneId: 'hall'
+            }
+          ]
+        },
+
+        hall: {
+          title: 'Hall',
+          type: 'equirectangular',
+          panorama: 'assets/scenes/hall 2.jpeg',
+          hotSpots: [
+            {
+              pitch: 0.345100766380467,
+              yaw: -50.806267347056526,
+              type: 'scene',
+              text: 'Ir al patio',
+              sceneId: 'patio'
+            },
+            {
+              pitch: -3.085380281194529,
+              yaw: 91.75654092458201,
+              type: 'scene',
+              text: 'Volver a la entrada',
+              sceneId: 'entrada'
+            }
+          ]
+        },
+
+        patio: {
+          title: 'Patio',
+          type: 'equirectangular',
+          panorama: 'assets/scenes/patio3.png',
+          hotSpots: [
+            {
+              pitch: -8.325875120734773,
+              yaw: 24.917857008179055,
+              type: 'scene',
+              text: 'Ir a carpa',
+              sceneId: 'carpa'
+            },
+            {
+              pitch: -9.959598646637327,
+              yaw: -160.56153335992326,
+              type: 'scene',
+              text: 'Ir al huerto',
+              sceneId: 'huerto'
+            },
+            {
+              pitch: -8.756447962228316,
+              yaw: 59.0492912770693,
+              type: 'scene',
+              text: 'Volver al hall',
+              sceneId: 'hall'
+            }
+          ]
+        },
+
+       carpa: {
+          title: 'Carpa',
+          type: 'equirectangular',
+          panorama: 'assets/scenes/carpa-4.png',
+          hotSpots: [
+            {
+              pitch: -4,
+              yaw: 180,
+              type: 'scene',
+              text: 'Volver al patio',
+              sceneId: 'patio'
+            }
+          ]
+        },
+        huerto: {
+          title: 'Huerto',
+          type: 'equirectangular',
+          panorama: 'assets/scenes/Huerto 5.jpeg',
+          hotSpots: [
+            {
+              pitch: 3.2171395691711804,
+              yaw: 87.2731371832797,
+              type: 'scene',
+              text: 'Volver al patio',
+              sceneId: 'patio'
+            },
+            {
+              pitch: -2.199586448906336,
+              yaw: -100.56412174681203,
+              type: 'scene',
+              text: 'Ir a las gradas',
+              sceneId: 'gradas'
+            }
+          ]
+        },
+
+        gradas: {
+          title: 'Gradas',
+          type: 'equirectangular',
+          panorama: 'assets/scenes/Gradas 6.png',
+          hotSpots: [
+            {
+              pitch: -3.183837448589871,
+              yaw: -118.04800558402926,
+              type: 'scene',
+              text: 'Ir al rincón de la mujer',
+              sceneId: 'rinconMujer'
+            },
+            {
+              pitch: 1.752157536531411,
+              yaw: 134.30229615454334,
+              type: 'scene',
+              text: 'Volver al huerto',
+              sceneId: 'huerto'
+            }
+          ]
+        },
+
+        rinconMujer: {
+          title: 'Rincón de la mujer',
+          type: 'equirectangular',
+          panorama: 'assets/scenes/RinconMujer 7.png',
+          hotSpots: [
+            {
+              pitch: -0.04615599362425916,
+              yaw: 126.55153257975314,
+              type: 'scene',
+              text: 'Acceso a gradas',
+              sceneId: 'gradas'
+            }
+          ]
+        }
+      }
+    });
+  </script>
+</body>
+</html>
